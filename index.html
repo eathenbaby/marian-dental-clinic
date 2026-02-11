@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Marian Dental Clinic | Pala's Premier Dental Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: { DEFAULT: '#0EA5E9', foreground: '#FFFFFF' },
+              cta: { DEFAULT: '#10B981', foreground: '#FFFFFF' },
+              accent: '#3B82F6',
+              dark: '#0B1120',
+              destructive: '#EF4444',
+            },
+            fontFamily: {
+              sans: ['DM Sans', 'sans-serif'],
+              display: ['Fraunces', 'serif'],
+              serif: ['Cormorant Garamond', 'serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      /* CRITICAL FOR SCROLLING: Reset height to allow Lenis to calculate total content height */
+      html, body {
+        height: auto !important;
+        min-height: 100% !important;
+        margin: 0;
+        padding: 0;
+        background-color: #0B1120;
+      }
+      
+      body {
+        font-family: 'DM Sans', sans-serif;
+        color: #FAFAFA;
+        overflow-x: hidden;
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #0EA5E9, #3B82F6, #6366F1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Lenis recommended CSS */
+      html.lenis { height: auto; }
+      .lenis.lenis-smooth { scroll-behavior: auto; }
+      .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+      .lenis.lenis-stopped { overflow: hidden; }
+    </style>
+
+  </head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
